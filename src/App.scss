@@ -1,0 +1,98 @@
+$paddingIn: .7rem 1rem;
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+    text-align: center;
+    &__error{
+        margin-bottom: auto;
+    }
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .3rem;
+
+    &__input {
+        border: none;
+        background: none;
+        background-color: #333a46;
+        padding: $paddingIn ;
+        border-radius: .5rem;
+        color: white;
+
+        &::placeholder {
+            color: white;
+        }
+
+        &:focus {
+            outline: none;
+            outline: 1px solid rgb(165, 165, 165);
+        }
+    }
+
+    &__btn {
+        border: none;
+        background: none;
+        border-radius: .5rem;
+        color: white;
+        background-color: #181a1f;
+        padding: $paddingIn;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #151516;
+        }
+
+        &:active{
+            background-color: #646464;
+            transform: translateY(2px);
+        }
+    }
+}
+
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    display: grid;
+    row-gap: 3rem;
+    column-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    text-align: center;
+    // border: 1px solid;
+}
+
+
+.card-movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    gap: 1rem;
+    // border: 1px solid;
+
+    &__img {
+        flex: 1;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: .5rem;
+    }
+
+    &__title{
+        margin: 0;
+    }
+
+    &__year{
+        margin: 0;
+        margin-top: auto;
+    }
+}
